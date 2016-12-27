@@ -87,7 +87,7 @@
       <dependency>
         <groupId>com.io7m.jintegers</groupId>
         <artifactId>io7m-jintegers-core</artifactId>
-        <version>[1.1.0-SNAPSHOT, 2.0.0)</version>
+        <version>[1.0.2, 2.0.0)</version>
       </dependency>
       <dependency>
         <groupId>com.io7m.jcanephora</groupId>
