@@ -92,12 +92,12 @@
       <dependency>
         <groupId>com.io7m.jcanephora</groupId>
         <artifactId>io7m-jcanephora-core</artifactId>
-        <version>0.53.1-SNAPSHOT</version>
+        <version>0.53.1</version>
       </dependency>
       <dependency>
         <groupId>com.io7m.jcanephora</groupId>
         <artifactId>io7m-jcanephora-jogl</artifactId>
-        <version>0.53.1-SNAPSHOT</version>
+        <version>0.53.1</version>
       </dependency>
       <dependency>
         <groupId>com.io7m.smfj</groupId>
