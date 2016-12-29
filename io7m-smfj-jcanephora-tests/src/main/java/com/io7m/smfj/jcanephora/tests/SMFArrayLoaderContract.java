@@ -230,6 +230,9 @@ public abstract class SMFArrayLoaderContract
         }
         break;
       }
+      default: {
+        throw new UnreachableCodeException();
+      }
     }
   }
 
@@ -335,6 +338,9 @@ public abstract class SMFArrayLoaderContract
           Assert.assertEquals(1L, vw);
         }
         break;
+      }
+      default: {
+        throw new UnreachableCodeException();
       }
     }
   }
@@ -442,6 +448,9 @@ public abstract class SMFArrayLoaderContract
         }
         break;
       }
+      default: {
+        throw new UnreachableCodeException();
+      }
     }
   }
 
@@ -548,6 +557,9 @@ public abstract class SMFArrayLoaderContract
         }
         break;
       }
+      default: {
+        throw new UnreachableCodeException();
+      }
     }
   }
 
@@ -651,6 +663,9 @@ public abstract class SMFArrayLoaderContract
         }
         break;
       }
+      default: {
+        throw new UnreachableCodeException();
+      }
     }
   }
 
@@ -751,6 +766,9 @@ public abstract class SMFArrayLoaderContract
           Assert.assertEquals(vw, 1000.0, 0.0);
         }
         break;
+      }
+      default: {
+        throw new UnreachableCodeException();
       }
     }
   }
@@ -856,6 +874,9 @@ public abstract class SMFArrayLoaderContract
         }
         break;
       }
+      default: {
+        throw new UnreachableCodeException();
+      }
     }
   }
 
@@ -909,6 +930,9 @@ public abstract class SMFArrayLoaderContract
         Assert.assertEquals(127L, (long) rb.get(10));
         Assert.assertEquals(0L, (long) rb.get(11));
         break;
+      }
+      default: {
+        throw new UnreachableCodeException();
       }
     }
   }
@@ -1471,12 +1495,12 @@ public abstract class SMFArrayLoaderContract
     g_ao.arrayObjectDelete(array_object);
   }
 
-  private class Meta implements SMFParserEventsMetaType
+  private final class Meta implements SMFParserEventsMetaType
   {
     @Override
     public boolean onMeta(
-      final int vendor,
-      final int schema,
+      final long vendor,
+      final long schema,
       final long length)
     {
       throw new UnreachableCodeException();
@@ -1484,8 +1508,8 @@ public abstract class SMFArrayLoaderContract
 
     @Override
     public void onMetaData(
-      final int vendor,
-      final int schema,
+      final long vendor,
+      final long schema,
       final byte[] data)
     {
       throw new UnreachableCodeException();

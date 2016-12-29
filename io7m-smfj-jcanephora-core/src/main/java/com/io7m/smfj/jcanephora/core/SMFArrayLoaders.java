@@ -393,8 +393,8 @@ public final class SMFArrayLoaders
 
     @Override
     public boolean onMeta(
-      final int vendor,
-      final int schema,
+      final long vendor,
+      final long schema,
       final long length)
     {
       return this.meta.onMeta(vendor, schema, length);
@@ -402,8 +402,8 @@ public final class SMFArrayLoaders
 
     @Override
     public void onMetaData(
-      final int vendor,
-      final int schema,
+      final long vendor,
+      final long schema,
       final byte[] data)
     {
       this.meta.onMetaData(vendor, schema, data);
