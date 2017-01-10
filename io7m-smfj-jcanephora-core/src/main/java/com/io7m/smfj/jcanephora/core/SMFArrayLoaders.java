@@ -28,6 +28,9 @@ import com.io7m.jcanephora.core.JCGLUnsignedType;
 import com.io7m.jcanephora.core.api.JCGLArrayBuffersType;
 import com.io7m.jcanephora.core.api.JCGLIndexBuffersType;
 import com.io7m.jcanephora.core.api.JCGLInterfaceGL33Type;
+import com.io7m.jintegers.Unsigned16;
+import com.io7m.jintegers.Unsigned32;
+import com.io7m.jintegers.Unsigned8;
 import com.io7m.jlexing.core.LexicalPosition;
 import com.io7m.jnull.NullCheck;
 import com.io7m.jnull.Nullable;
@@ -575,21 +578,21 @@ public final class SMFArrayLoaders
 
       switch (this.index_type) {
         case TYPE_UNSIGNED_BYTE: {
-          buffer.put(this.index_position, (byte) (v0 & 0xffL));
-          buffer.put(this.index_position + 1, (byte) (v1 & 0xffL));
-          buffer.put(this.index_position + 2, (byte) (v2 & 0xffL));
+          Unsigned8.packToBuffer((int) v0, buffer, this.index_position);
+          Unsigned8.packToBuffer((int) v1, buffer, this.index_position + 1);
+          Unsigned8.packToBuffer((int) v2, buffer, this.index_position + 2);
           break;
         }
         case TYPE_UNSIGNED_INT: {
-          buffer.putInt(this.index_position, (int) (v0 & 0xffffffffL));
-          buffer.putInt(this.index_position + 4, (int) (v1 & 0xffffffffL));
-          buffer.putInt(this.index_position + 8, (int) (v2 & 0xffffffffL));
+          Unsigned32.packToBuffer(v0, buffer, this.index_position);
+          Unsigned32.packToBuffer(v1, buffer, this.index_position + 4);
+          Unsigned32.packToBuffer(v2, buffer, this.index_position + 8);
           break;
         }
         case TYPE_UNSIGNED_SHORT: {
-          buffer.putChar(this.index_position, (char) v0);
-          buffer.putChar(this.index_position + 2, (char) v1);
-          buffer.putChar(this.index_position + 4, (char) v2);
+          Unsigned16.packToBuffer((int) v0, buffer, this.index_position);
+          Unsigned16.packToBuffer((int) v1, buffer, this.index_position + 2);
+          Unsigned16.packToBuffer((int) v2, buffer, this.index_position + 4);
           break;
         }
       }
