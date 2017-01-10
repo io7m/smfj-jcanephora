@@ -20,6 +20,7 @@ import com.io7m.jcanephora.core.JCGLUsageHint;
 import com.io7m.smfj.core.SMFAttributeName;
 import com.io7m.smfj.core.SMFImmutableStyleType;
 import javaslang.collection.Map;
+import org.immutables.javaslang.encodings.JavaslangEncodingEnabled;
 import org.immutables.value.Value;
 
 import java.util.HashMap;
@@ -31,6 +32,7 @@ import java.util.Objects;
  */
 
 @SMFImmutableStyleType
+@JavaslangEncodingEnabled
 @Value.Immutable
 public interface SMFArrayObjectConfigurationType
 {
