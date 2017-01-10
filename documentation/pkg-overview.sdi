@@ -1,0 +1,6 @@
+[section [title Orientation] [id pkg.orientation]]
+[subsection [title Overview] [id pkg.orientation.overview]]
+[paragraph]
+The [term [type package] io7m-smfj-jcanephora] package implements
+provides [link-ext [target "http://io7m.github.io/jcanephora"] jcanephora]
+integration for [link-ext [target "http://io7m.github.io/smf"] smfj].
